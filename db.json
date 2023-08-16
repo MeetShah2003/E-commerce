@@ -1,5 +1,4 @@
 {
-  "login": [],
   "register": [
     {
       "name": "ShahMeet",
@@ -12,6 +11,36 @@
       "email": "meetshah1@gmail.com",
       "pass": "646@#$meet",
       "id": 2
+    },
+    {
+      "name": "AbcShah",
+      "email": "abc@gmail.com",
+      "pass": "64@#$%abcshah",
+      "id": 3
+    },
+    {
+      "name": "ShahMeet",
+      "email": "jethalalgada@gmail.com",
+      "pass": "64@#$%jethalal",
+      "id": 4
+    },
+    {
+      "name": "Outdoor toys",
+      "email": "hitesh123@gmail.com",
+      "pass": "64@#$%hiteshvora",
+      "id": 5
+    },
+    {
+      "name": "AS",
+      "email": "as@gmail.com",
+      "pass": "64@#$%asshah",
+      "id": 6
+    },
+    {
+      "name": "ShahMeet",
+      "email": "meetshah11@gmail.com",
+      "pass": "64@#$%hewllo",
+      "id": 7
     }
   ]
 }

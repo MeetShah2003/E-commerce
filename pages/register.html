@@ -29,12 +29,12 @@
           <p style="color: red;" id="e_err"></p>
           <div class="input-box">
             <span class="icon"><i class="fa-solid fa-lock"></i></span>
-            <input type="password" id="passwd"/>
+            <input type="password" id="passwd" class="show"/>
             <label>Password</label>
           </div>
           <p style="color: red;" id="p_err"></p>
           <div class="remember-forgot">
-            <label> <input type="checkbox" id="chk"/>Show password </label>
+            <label> <input type="checkbox" id="chk" onclick="myFunction()"/>Show password </label>
             <a href="#">Forgot password?</a>
           </div>
           <button type="submit" value="submit">Register</button>
@@ -42,5 +42,15 @@
       </div>
     </section>
     <script src="../js/register.js"></script>
+    <script>
+      function myFunction() {
+        let show = document.querySelector(".show");
+        if (show.type == "password") {
+          show.type = "text";
+        } else {
+          show.type = "password";
+        }
+      }
+    </script>
   </body>
 </html>

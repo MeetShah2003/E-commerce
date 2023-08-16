@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login page</title>
+    <style>
+      @import url(../style/all.min.css);
+      @import url(../style/login.css);
+      @import url(../style/style.css);
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="login-box">
+        <form action="" id="form">
+          <h2>Login</h2>
+          <div class="input-box">
+            <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+            <input type="email" id="email" required />
+            <label>Email</label>
+            <span id="emailerr"></span>
+          </div>
+          <div class="input-box">
+            <span class="icon"><i class="fa-solid fa-lock"></i></span>
+            <input type="password" id="passwd" class="show" required />
+            <label>Password</label>
+            <span id="passerr"></span>
+          </div>
+          <div class="remember-forgot">
+            <label>
+              <input type="checkbox" id="chk" onclick="myFunction()" />Show
+              password
+            </label>
+            <a href="#">Show password?</a>
+          </div>
+          <button type="submit" id="value">Login</button>
+          <div class="register-link">
+            <p>Don't have an account? <a href="register.html">Signup</a></p>
+          </div>
+        </form>
+      </div>
+    </section>
+    <script src="../js/login.js"></script>
+    <script>
+      function myFunction() {
+        let show = document.querySelector(".show");
+        if (show.type == "password") {
+          show.type = "text";
+        } else {
+          show.type = "password";
+        }
+      }
+    </script>
+  </body>
+</html>
