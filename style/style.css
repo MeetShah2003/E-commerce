@@ -1,0 +1,35 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#nav {
+  background-color: black;
+  justify-content: space-around;
+}
+#nav ul {
+  margin: 15px 0px;
+}
+#nav a {
+  color: white;
+  padding: 0px 15px;
+  font-size: 20px;
+  transition: all 0.5s;
+}
+#nav a:hover {
+  color: antiquewhite;
+}/*# sourceMappingURL=style.css.map */

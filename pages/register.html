@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register page</title>
+    <style>
+      @import url(../style/all.min.css);
+      @import url(../style/style.css);
+      @import url(../style/register.css);
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="login-box">
+        <form id="form">
+          <h2>Register</h2>
+          <div class="input-box">
+            <span class="icon"><i class="fa-solid fa-user"></i></span>
+            <input type="text" id="name"/>
+            <label>UserName</label>
+          </div>
+          <p style="color: red;" id="u_err"></p>
+          <div class="input-box">
+            <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+            <input type="email" id="email"/>
+            <label>Email</label>
+          </div>
+          <p style="color: red;" id="e_err"></p>
+          <div class="input-box">
+            <span class="icon"><i class="fa-solid fa-lock"></i></span>
+            <input type="password" id="passwd"/>
+            <label>Password</label>
+          </div>
+          <p style="color: red;" id="p_err"></p>
+          <div class="remember-forgot">
+            <label> <input type="checkbox" id="chk"/>Show password </label>
+            <a href="#">Forgot password?</a>
+          </div>
+          <button type="submit" value="submit">Register</button>
+        </form>
+      </div>
+    </section>
+    <script src="../js/register.js"></script>
+  </body>
+</html>
