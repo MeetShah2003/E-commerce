@@ -37,18 +37,21 @@ const userData = (e) => {
       .then((res) => res.json())
       .then((data) => {
         if (data.length > 0) {
-          if (data.email == user.email) {
-            alert("User already Exist...!");
-            setTimeout(() => {
-              window.location.href = "../index.html";
-            }, 1000);
-          }
+          alert("User already Exist...!");
+          setTimeout(() => {
+            window.location.href = "../index.html";
+          }, 1000);
         } else {
-          fetch(`http://localhost:1020/register`, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(user),
-          });
+          try {
+            fetch(`http://localhost:1020/register`, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(user),
+            });
+            localStorage.setItem("login", true);
+          } catch (err) {
+            alert("Error...!");
+          }
         }
       });
   }
