@@ -1,0 +1,57 @@
+#content-box{
+    display: flex;
+    flex-wrap: wrap;
+}
+#left-box{
+    border: 1px solid black;
+    width: 10%;
+    height: 91vh;
+}
+img{
+    width: 200px;
+    height: 250px;
+}
+#right-box{
+    border: 1px solid blueviolet;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 90%;
+    height: 91vh;
+    overflow: scroll;
+    gap: 20px;
+    padding: 5px 15px;
+}
+#right-box div{
+    margin: 15px 0px;
+}
+#lth,#htl,#buy,#cart{
+    position: relative;
+    margin: 15px 5px;
+    padding: 9px 10px;
+    border-radius: all 15px;
+    background: transparent;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.3s;
+}
+#lth::before,#htl::before,#buy::before,#cart::before{
+    position: absolute;
+    content: "";
+    background-color: black;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+    transform-origin: right;
+    z-index: -1;
+}
+#lth:hover::before,#htl:hover::before,#buy:hover::before,#cart:hover::before{
+    color: antiquewhite;
+    transform: scale(1);
+    transform-origin: left;
+}
+#lth:hover,#htl:hover,#buy:hover,#cart:hover{
+    color: antiquewhite;
+}
