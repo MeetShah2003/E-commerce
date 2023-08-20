@@ -32,4 +32,12 @@ a {
 }
 #nav a:hover {
   color: antiquewhite;
+}
+
+#content-box #search {
+  margin-top: 15px;
+  padding: 15px 0px;
+  width: 100px;
+  display: block;
+  margin: auto;
 }/*# sourceMappingURL=style.css.map */

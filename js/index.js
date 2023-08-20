@@ -2,9 +2,10 @@ import { nav } from "../components/Navbar.js";
 
 document.getElementById("navbar").innerHTML = nav();
 
-let product = [];
+let products=[];
 
 const display = ((products1) => {
+  document.getElementById("right-box").innerHTML="";
     products1.map((item) => {
     let img = document.createElement("img");
     img.src = item.image;
@@ -44,15 +45,32 @@ const get = () => {
     .then((res) => res.json())
     .then((data) => {
         display(data);
-        product= data;
+        products=data
     });
 };
 get();
 
-// const handellth=((item)=>{
-//     let data=item.price.sort((a,b)=>a.item.price-b.item.price);
-//     display(data);
-//     console.log(data);
-// });
+const handellth=()=>{
+  let data=products.sort((a,b)=>a.price-b.price);
+  display(data);
+};
 
-// document.getElementById("lth").addEventListener("click",handellth);
+document.getElementById("lth").addEventListener("click",handellth);
+
+const handelhtl=()=>{
+  let data=products.sort((a,b)=>b.price-a.price);
+  display(data);
+};
+
+
+document.getElementById("htl").addEventListener("click",handelhtl);
+
+
+const searchData=()=>{
+  let inputvalue=document.getElementById("search").value;
+  let data=products.filter((item)=>item.category.match(inputvalue.toLowerCase()));
+  display(data);
+};
+
+
+document.getElementById("search").addEventListener("keypress",searchData);

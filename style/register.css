@@ -130,39 +130,3 @@ button{
         width: 290px;
     }
 }
-
-/* Sign up css */
-
-.navigation{
-    height: 74px;
-    background-color: red;
-    display: flex; 
-    justify-content: space-around;
-    align-items: center;
-}
-.content{
-    height: 95px;
-    background-color: blue;
-}
-.footer{
-    height: 50px;
-    background-color: blueviolet;
-}
-
-/* Sign up utilities */
-:root{
-    --main-bg-brown: brown;
-}
-
-.max-width-1{
-    max-width: 80vw;
-}
-
-.max-width-2{
-    max-width: 60vw;
-}
-
-
-.mx-auto{
-    margin: auto;
-}
