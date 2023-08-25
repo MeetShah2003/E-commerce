@@ -5,11 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cart page</title>
     <style>
+        @import url(../style/all.min.css);
         @import url(../style/style.css);
+        @import url(../style/cart.css);
     </style>
   </head>
   <body>
     <div id="navbar"></div>
+
+    <!-- cart design -->
+    <!-- <div class="container mt-50">
+      <div class="row pb-10">
+        <div class="left-box row gap-20">
+          <div class="product-img">
+            <img src="data:image/webp;base64,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" alt="">
+          </div>
+          <div class="product-details gap-10">
+            <div class="p-category">hello</div>
+            <div class="p-color">hello</div>
+            <div class="p-size">hello</div>
+          </div>
+          <div class="p-price">
+            <h3 class="mb-10">Each</h3>
+            <p>$33.320</p>
+          </div>
+          <div class="p-quantity">
+            <h3 class="mb-10">Quantity</h3>
+            <p><i class="fa-solid fa-minus pr-10"></i>10<i class="fa-solid fa-plus pl-10"></i></p>
+          </div>
+          <div class="p-total">
+            <h3 class="mb-10">Total</h3>
+            <p>$33.33</p>
+          </div>
+        </div>
+        <div class="right-box">
+          hello
+        </div>
+      </div>
+    </div> -->
+    
+    
+    <!-- cart design -->
+    <h1 class="heading"><i class="fa-solid fa-bag-shopping"></i>My Cart</h1>
+    <section class="cart">
+      <div class="container">
+        <div class="row">
+          <table border="3" cellpadding="10" cellspacing="10">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody id="tbody">
+              <tr>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
     <script type="module" src="../js/cart.js"></script>
   </body>
 </html>

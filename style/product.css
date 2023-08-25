@@ -55,3 +55,57 @@ img{
 #lth:hover,#htl:hover,#buy:hover,#cart:hover{
     color: antiquewhite;
 }
+
+
+#right-box{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    margin-top: 30px;
+}
+#right-box div{
+    background-color: rgb(189, 248, 100);
+    text-align: center;
+    border-radius: 6px;
+    padding: 15px;
+}
+#right-box div img{
+    width:150px;
+    height:200px;
+    margin: auto;
+    padding: 15px;
+}
+
+
+#right-box div h2{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+#right-box div h4{
+    font-weight: 900;
+    margin: 5px 0px 0px;
+    font-size:18px;
+    color: #8231d3;
+}
+
+#right-box div h5{
+    color: rgb(116, 116, 116);
+
+}
+
+#right-box .btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+#right-box .btns button{
+    margin: 5px;
+    padding: 10px;
+    background-color: #8231d3;
+    color: white;
+    border-radius: 6px;
+    width: 50%;
+    font-size: 14px;
+}

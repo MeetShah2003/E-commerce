@@ -10,11 +10,11 @@ const loginData = (e) => {
     .then((data) => {
       if (data.length > 0) {
         if (data[0].pass === login.pass) {
+          localStorage.setItem("login", true);
           alert("Login Successfull");
           setTimeout(() => {
             window.location.href = "../index.html";
           }, 1000);
-          localStorage.setItem("login", true);
         } else {
           alert("Incorrect password");
         }

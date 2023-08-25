@@ -48,11 +48,11 @@ const userData = (e) => {
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify(user),
             });
+            localStorage.setItem("login", true);
             setTimeout(() => {
               window.location.href = "../index.html";
             }, 1000);
             alert("Registered successfull");
-            localStorage.setItem("login", true);
           } catch (err) {
             alert("Error...!");
           }
